@@ -1,0 +1,7 @@
+/.venv
+/build
+/dist
+/logs
+/main.spec
+/s3uploader.exe
+/s3uploader.zip

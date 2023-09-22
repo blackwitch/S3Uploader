@@ -1,0 +1,14 @@
+aws_access_key_id: "your_access_key_id"
+aws_secret_access_key: "your_secret_access_key"
+
+backup_folders:
+  - folder: "./"
+    s3_bucket_name: "backup_bucket_name"
+    prefix: "my_backup"
+    include: [".dat", ".exe"]
+    backup_schedule: "0 4 * * 2,4"  # cron 형식 분, 시, 일, 월, 요일. 화, 목요일 오전 4시에 실행되도록 한 예시 => 0 4 * * 2,4
+  - folder: "./logs"
+    s3_bucket_name: "backup_bucket_name"
+    prefix: "my_backup_logs"
+    include: [".dat", ".exe"]
+    backup_schedule: "0 1 * * 2,4"  # cron 형식 분, 시, 일, 월, 요일. 월, 목요일 오전 1시에 실행되도록 한 예시 => 0 1 * * 1,4
